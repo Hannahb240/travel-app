@@ -1,25 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AlbumComponent } from './album/album.component';
-import { CardComponent } from './album/card/card.component';
+import { AlbumsComponent } from './albums/albums.component';
+import { CardComponent } from './albums/card/card.component';
 import { HeaderComponent} from './header/header.component';
 import { LogAlbumPageSelectedService } from './logAlbumPageSelected.service';
 import { parisData } from './albumData/parisData.service';
 import { berlinData } from './albumData/berlinData.service';
+import { AlbumComponent } from './albums/album/album.component';
 
+
+const appRoutes: Routes = [
+  // {path: '', component: AlbumsComponent },
+  {path: 'albums', component: AlbumsComponent},
+  {path: 'albums/:location', component: AlbumsComponent}
+  
+]
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumComponent,
+    AlbumsComponent,
     CardComponent,
-    HeaderComponent
+    HeaderComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [LogAlbumPageSelectedService, 
               parisData, 

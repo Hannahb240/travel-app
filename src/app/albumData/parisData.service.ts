@@ -1,4 +1,4 @@
-import { Card } from '../album/card/card.model';
+import { Card } from '../albums/card/card.model';
 
 export class parisData {
 

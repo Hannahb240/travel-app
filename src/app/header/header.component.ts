@@ -12,10 +12,11 @@ export class HeaderComponent implements OnInit {
   constructor(private albumPageSelectedService: LogAlbumPageSelectedService) { }
 
   ngOnInit(): void {
+
   }
 
-  onUserSelection(selectionMade: string){
-    this.albumPageSelectedService.logSelectionMade(selectionMade);
-  }
+  // onUserSelection(selectionMade: string){
+  //   this.albumPageSelectedService.logSelectionMade(selectionMade);
+  // }
 
 }
