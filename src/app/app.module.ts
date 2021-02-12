@@ -14,10 +14,10 @@ import { AlbumComponent } from './albums/album/album.component';
 
 
 const appRoutes: Routes = [
-  // {path: '', component: AlbumsComponent },
+  {path: '', redirectTo: 'albums', pathMatch: 'full'},
   {path: 'albums', component: AlbumsComponent},
-  {path: 'albums/:location', component: AlbumsComponent}
-  
+  {path: 'albums/:location', component: AlbumComponent},
+
 ]
 @NgModule({
   declarations: [

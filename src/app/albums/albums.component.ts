@@ -14,8 +14,9 @@ export class AlbumsComponent implements OnInit {
               private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    
+    console.log("on init");
     this.route.params.subscribe(next => {
+      console.log("location changed");
       if(next['location']) {
          this.albumPageSelectedService.
               logSelectionMade(next['location'].  
