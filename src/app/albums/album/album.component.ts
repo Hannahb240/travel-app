@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { LogAlbumPageSelectedService } from 'src/app/logAlbumPageSelected.service';
 import { Card } from '../card/card.model';
@@ -15,25 +15,24 @@ export class AlbumComponent implements OnInit, OnDestroy {
               private albumPageSelectedService: LogAlbumPageSelectedService) { }
 
   data: Card[];
-  numberr: number;
   location: string;
   private getDataSubscription: Subscription;
 
   ngOnInit(): void {
       
-    this.numberr = 0;
     this.subscribeToGetDataFromService();
     this.location = this.route.snapshot.params['location'];
-    this.albumPageSelectedService.logSelectionMade(this.location);
 
+    this.route.params.subscribe( (params: Params) => {
+      this.location = params['location'];
+      this.albumPageSelectedService.logSelectionMade(this.location);
+    })
   }
 
   subscribeToGetDataFromService() {
     this.getDataSubscription = this.albumPageSelectedService.getDataEmitter.
         subscribe(() => {
                    this.data = this.albumPageSelectedService.getData();
-                   this.numberr++;
-                   console.log(this.numberr);
                    console.log(this.data);
                   });
   }

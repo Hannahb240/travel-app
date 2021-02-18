@@ -15,9 +15,9 @@ import { AlbumComponent } from './albums/album/album.component';
 
 const appRoutes: Routes = [
   {path: '', redirectTo: 'albums', pathMatch: 'full'},
-  {path: 'albums', component: AlbumsComponent},
-  {path: 'albums/:location', component: AlbumComponent},
-
+  {path: 'albums', component: AlbumsComponent, children: [
+    {path: ':location', component: AlbumComponent} 
+  ]}
 ]
 @NgModule({
   declarations: [

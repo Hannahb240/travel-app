@@ -1,7 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
-
-import { LogAlbumPageSelectedService } from '../logAlbumPageSelected.service'; 
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-albums',
@@ -10,19 +7,9 @@ import { LogAlbumPageSelectedService } from '../logAlbumPageSelected.service';
 })
 export class AlbumsComponent implements OnInit {
 
-  constructor(private albumPageSelectedService: LogAlbumPageSelectedService,
-              private route: ActivatedRoute) {}
+  constructor() {}
 
   ngOnInit(): void {
-    console.log("on init");
-    this.route.params.subscribe(next => {
-      console.log("location changed");
-      if(next['location']) {
-         this.albumPageSelectedService.
-              logSelectionMade(next['location'].  
-              toString());
-      }
-    })
   }
 
 }

@@ -15,7 +15,6 @@ export class LogAlbumPageSelectedService{
     getDataEmitter = new Subject<boolean>();
 
     logSelectionMade(selection: string){
-        console.log('User wants to view ', selection);
         
         if(selection == 'paris') {   
             this.data =  this.parisData.getParisData();           
