@@ -12,16 +12,19 @@ export class LogAlbumPageSelectedService{
                 private berlinData: berlinData) {}
 
     data: Card[];
+    container: string;
     getDataEmitter = new Subject<boolean>();
 
     logSelectionMade(selection: string){
         
         if(selection == 'paris') {   
-            this.data =  this.parisData.getParisData();           
+            this.data =  this.parisData.getParisData();   
+            this.container = this.parisData.getParisContainer();        
         }
 
         if(selection == 'berlin') {
             this.data = this.berlinData.getBerlinData();
+            this.container = this.berlinData.getBerlinContainer();
         } 
         this.resetAlbumArray();
     }
@@ -32,6 +35,10 @@ export class LogAlbumPageSelectedService{
 
     getData() {
         return this.data;
+    }
+
+    getContainer() {
+        return this.container;
     }
 
 }

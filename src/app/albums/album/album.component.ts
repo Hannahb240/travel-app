@@ -15,6 +15,7 @@ export class AlbumComponent implements OnInit, OnDestroy {
               private albumPageSelectedService: LogAlbumPageSelectedService) { }
 
   data: Card[];
+  container: string;
   location: string;
   private getDataSubscription: Subscription;
 
@@ -27,13 +28,13 @@ export class AlbumComponent implements OnInit, OnDestroy {
       this.location = params['location'];
       this.albumPageSelectedService.logSelectionMade(this.location);
     })
-  }
+    }
 
   subscribeToGetDataFromService() {
     this.getDataSubscription = this.albumPageSelectedService.getDataEmitter.
         subscribe(() => {
                    this.data = this.albumPageSelectedService.getData();
-                   console.log(this.data);
+                   this.container = this.albumPageSelectedService.getContainer();
                   });
   }
 
