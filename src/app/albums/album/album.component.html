@@ -1,34 +1,15 @@
-<h1>Displaying: {{this.location}} </h1>
+<h1>Displaying: {{ this.location }}</h1>
 
-<!-- <div class= "container-1">
-
-    <div *ngFor = "let card of this.data">
-        <img class="{{card.cssClass}}" src= "{{card.imagePath}}">     
-        <p>{{card.description}}</p>
+<ngx-masonry
+  [options]="masonryOptions"
+  style="width: 100vw"
+  [ordered]="true"
+  (itemsLoaded)="itemsLoaded()"
+>
+  <div class="grid-sizer"></div>
+  <div *ngFor="let card of data">
+    <div ngxMasonryItem class="grid-item">
+      <img [src]="card.imagePath" width="100%" style="margin-bottom: 20px" />
     </div>
-
-</div> -->
-<!-- 
-<div class= "container-1 {{this.container}}">
-    <div *ngFor = "let card of this.data">
-        <img class="{{card.cssClass}}" src= "{{card.imagePath}}">     
-        <p>{{card.description}}</p>
-    </div>
-
-</div>  -->
- 
-<div class= "gallery">
-    <!-- <div class="el1">Element 1</div> -->
-    <img class="el3" src= "assets/berlinImages/tall.jpeg">
-    <img class="el3" src= "assets/berlinImages/autumn.jpeg">
-    <img class="el3" src= "assets/berlinImages/wall.jpeg">
-    <img class="el3" src= "assets/berlinImages/river.jpeg">
-    <img class="el3" src= "assets/berlinImages/arialview.jpg">
-    <img class="el3" src= "assets/berlinImages/gate.jpeg">
-    
-    <!-- <div class="el2">Element 2</div>
-    <div class="el3">Element 3</div>
-    <div class="el4">Element 4 </div> -->
-</div>
-
-
+  </div>
+</ngx-masonry>
