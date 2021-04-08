@@ -1,32 +1,105 @@
-/* .container-1 div{
-    display:grid;
-    margin: 20px;
-    grid-template-columns: 200px 150px 20%;
-    grid-template-rows: 10rem;
-}*/
-
-
- .container-0{
-    display: grid; 
-    /* align-items: center; */
-    background: pink;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-template-rows: 300px 200px 200px; 
-}
 
 .el2{ 
-    /* background:pink; */
-    /* width: 100%; */
-    /* height: 100px; */
+    width: 300px;
+    height: 200px;
+    /* display: block; */
+    /* padding: 0 20px 20px;  */
 }
 
 .el3{
-    /* background:green; */
-    /* width: 20%;  */
-    /* height: 20%; */
-    /* object-fit: cover; */
-        /* width: 100%;
-        height: 100%;
-        object-fit: cover; */
-
+    /* padding: 0 20px 20px; */
+    width: 300px; 
+    /* box-sizing: border-box; */
 }
+
+.masonry-columns {
+    max-width: 100rem;
+    margin: 0 auto;
+    display: column;
+    columns: 3;
+    gap: 1rem;
+    /* align-items: center; */
+    align-content: space-around;
+    justify-content: center;
+}
+
+.masonry-columns > * {
+    break-inside: avoid;
+    margin-bottom: 1em;
+    /* margin-right: 0; */
+    align-content: center;
+}
+
+@media (max-width: 1000px) {
+    .el2{ 
+        width: 400px;
+        height: 250px;
+    }
+
+    .el3{ 
+        padding: 0 20px 20px;
+        width: 400px; 
+    }
+
+    .masonry-columns {
+        max-width: 100rem;
+        margin: 0 auto;
+        display: column;
+        columns: 2;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 800px) {
+    .el2{ 
+        width: 350px;
+        height: 250px;
+    }
+
+    .el3{
+        padding: 0 20px 20px; 
+        width: 350px; 
+    }
+    .masonry-columns {
+        max-width: 100rem;
+        margin: 0 auto;
+        display: column;
+        columns: 2;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .el2{ 
+        width: 400px;
+        height: 250px;
+    }
+
+    .el3{
+        padding: 0 20px 20px; 
+        width: 450px; 
+    }
+    .masonry-columns {
+        max-width: 100rem;
+        margin: 0 auto;
+        display: column;
+        columns: 1;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .masonry-columns {
+        flex-direction: row;
+        flex-wrap:wrap;
+        display:flex;
+        justify-content: center;
+    }
+}
+
+  
+
+  

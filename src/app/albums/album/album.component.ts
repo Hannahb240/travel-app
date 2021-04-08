@@ -29,7 +29,7 @@ export class AlbumComponent implements OnInit, OnDestroy {
       this.albumPageSelectedService.logSelectionMade(this.location);
     })
     }
-
+ 
   subscribeToGetDataFromService() {
     this.getDataSubscription = this.albumPageSelectedService.getDataEmitter.
         subscribe(() => {
@@ -42,4 +42,7 @@ export class AlbumComponent implements OnInit, OnDestroy {
     this.getDataSubscription.unsubscribe();
   }
 
+  itemsLoaded() {
+    console.log('itemsloaded');
+  }
 }

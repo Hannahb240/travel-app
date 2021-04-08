@@ -6,16 +6,16 @@ export class berlinData {
 
     berlinData: Card[] = [
   
-        new Card('Berlin', 'German, weiners', 'assets/berlinImages/arialview.jpg', 'box-1'),  
-        new Card('Berlin', 'the gate', 'assets/berlinImages/gate.jpeg', 'box-1'),
-        new Card('Berlin', 'German, weiners', 'assets/berlinImages/autumn.jpeg', 'box-1')
-        // new Card('Berlin', 'German, weiners', 'assets/berlinImages/city.jpeg', 'box-1'),    
-        // new Card('Berlin', 'German, weiners', 'assets/berlinImages/clubs.jpeg', 'box-1'), 
-        // new Card('Berlin', 'German, weiners', 'assets/berlinImages/office.jpeg', 'box-1'), 
-        // new Card('Berlin', 'German, weiners', 'assets/berlinImages/pretzel.jpeg', 'box-1'), 
-        // new Card('Berlin', 'German, weiners', 'assets/berlinImages/river.jpeg', 'box-1'), 
-        // new Card('Berlin', 'German, weiners', 'assets/berlinImages/tall.jpeg', 'box-1'), 
-        // new Card('Berlin', 'German, weiners', 'assets/berlinImages/wall.jpeg', 'box-1'), 
+        new Card('Berlin', 'German, weiners', 'assets/berlinImages/arialview.jpg', 'el3'),  
+        new Card('Berlin', 'the gate', 'assets/berlinImages/gate.jpeg', 'el3'),
+        new Card('Berlin', 'German, weiners', 'assets/berlinImages/autumn.jpeg', 'el3'),
+        new Card('Berlin', 'German, weiners', 'assets/berlinImages/city.jpeg', 'el3'),    
+        new Card('Berlin', 'German, weiners', 'assets/berlinImages/clubs.jpeg', 'el3'), 
+        new Card('Berlin', 'German, weiners', 'assets/berlinImages/office.jpeg', 'el3'), 
+        new Card('Berlin', 'German, weiners', 'assets/berlinImages/pretzel.jpeg', 'el3'), 
+        new Card('Berlin', 'German, weiners', 'assets/berlinImages/river.jpeg', 'el3'), 
+        new Card('Berlin', 'German, weiners', 'assets/berlinImages/tall.jpeg', 'el3'), 
+        new Card('Berlin', 'German, weiners', 'assets/berlinImages/wall.jpeg', 'el3'), 
       ];
 
 
